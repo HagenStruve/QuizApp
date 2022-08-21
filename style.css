@@ -19,3 +19,42 @@ body {
     height: 100vh;
     background-color: rgb(254, 250, 239)
 }
+
+.next {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: row;
+}
+
+.col-md-4 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(39, 53, 92);
+}
+
+.sid-bar-img {
+  height: auto;
+  width: 60px;
+  margin-top: 10px;
+}
+
+.row {
+    width: 700px;
+}
+
+.sid-bar-categorie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    margin-top: 60px;
+}
