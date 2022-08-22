@@ -1,5 +1,6 @@
 body {
     background-color: rgb(254, 250, 239) !important;
+    font-family: 'rubik';
 }
 
 
@@ -20,6 +21,10 @@ body {
     background-color: rgb(254, 250, 239)
 }
 
+.card-body {
+    text-align: center;
+}
+
 .next {
     display: flex;
     justify-content: space-between;
@@ -30,6 +35,25 @@ body {
     margin-bottom: 12px;
     display: flex;
     flex-direction: row;
+    align-items: center;
+}
+
+.reply {
+    display: flex;
+    align-items: center;
+    border-color: grey;
+    border-width: 1px;
+    border-style: solid;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+.reply:hover {
+    background-color: rgb(183, 247, 153);
+}
+
+.reply:hover .abcd {
+    background-color: rgb(136, 184, 113);
 }
 
 .col-md-4 {
@@ -150,6 +174,17 @@ body {
 
 }
 
-.navigation:hover.white-box-hover {
+.navigation:hover .white-box-hover {
     display: none;
+}
+
+.abcd {
+    background-color: rgb(214, 214, 214);
+    height: 50px;
+    width: 50px;
+    margin-left: 4px;
+}
+
+.content {
+    background-color: rgb(247, 247, 247);
 }
