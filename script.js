@@ -33,5 +33,13 @@ let questions = [
 },
 ];
 
+let currentQustion = 0;
 
-function init() {}
+
+//function init() {
+  }
+
+
+//function showQuestion() {
+    let question = questions[currentQustion];
+}
