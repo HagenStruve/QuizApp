@@ -43,8 +43,8 @@ body {
 
 .sid-bar-img {
   height: auto;
-  width: 60px;
-  margin-top: 10px;
+  width: 80px;
+  margin-top: 30px;
 }
 
 .row {
@@ -63,10 +63,10 @@ body {
 .sid-bar-categorie {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
     color: white;
     margin-top: 60px;
+    width: 100%;
 }
 
 .welcom-page {
@@ -110,5 +110,46 @@ body {
 
 .finish-card-img {
     height: auto;
-    width: 80px;
+    width: 100px;
+}
+
+.score-Text {
+    color: rgb(237, 140, 62);
+}
+
+.endbutton-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.share-button {
+    width: 180px;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+}
+
+.navigation {
+    cursor: pointer;
+    color: rgb(206, 206, 206);
+    margin-left: 70px;
+}
+
+.navigation-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.white-box-hover {
+    width: 5px;
+    height: 100%;
+    background-color: white;
+    margin-left: 2px;
+
+}
+
+.navigation:hover.white-box-hover {
+    display: none;
 }
