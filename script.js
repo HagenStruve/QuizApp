@@ -72,10 +72,13 @@ function answer(selection) {
 
 function nextQuestion() {
     currentQustion++; /* erweitert currentQuestion um 1*/
-    showQuestion();
-
     document.getElementById('arrowNext').disabeled = true;
+    resetAnswerButton();
+    showQuestion();
+}
 
+
+function resetAnswerButton() {
     document.getElementById('answer_1').parentNode.classList.remove('wrong'); /*entfernt die farbe wieder*/
     document.getElementById('answer_1').parentNode.childNodes[1].classList.remove('rigth');  /*entfernt die farbe wieder*/
     document.getElementById('answer_1').parentNode.classList.remove('rigth'); /*entfernt die farbe wieder*/
