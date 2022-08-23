@@ -50,11 +50,11 @@ body {
 }
 
 .reply:hover {
-    background-color: rgb(183, 247, 153);
+    background-color: rgb(199, 199, 199);
 }
 
 .reply:hover .abcd {
-    background-color: rgb(136, 184, 113);
+    background-color: rgb(199, 199, 199);
 }
 
 .col-md-4 {
@@ -212,4 +212,12 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.rigth {
+    background-color: rgb(183, 247, 153);
+}
+
+.wrong {
+    background-color: rgb(255, 163, 164);
 }

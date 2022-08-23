@@ -67,36 +67,36 @@
                     </div>-->
 
                     <div class="card-body">
-                        <h2 class="card-title">Wer ist hier der Boss?</h2>
-                        <div class="reply">
+                        <h2 class="card-title" id="questionText">Wer ist hier der Boss?</h2>
+                        <div class="reply" id="reply_1" onclick="answer('answer_1')">
                             <div class="abcd">
                                 <h1>A</h1>
                             </div>
-                            <div class="card-body">
+                            <div class="card-body" id="answer_1">
                                 Ich
                             </div>
                         </div>
-                        <div class="reply">
+                        <div class="reply" id="reply_2" onclick="answer('answer_2')">
                             <div class="abcd">
                                 <h1>B</h1>
                             </div>
-                            <div class="card-body">
+                            <div class="card-body" id="answer_2">
                                 Du
                             </div>
                         </div>
-                        <div class="reply">
+                        <div class="reply" id="reply_3" onclick="answer('answer_3')">
                             <div class="abcd">
                                 <h1>C</h1>
                             </div>
-                            <div class="card-body">
+                            <div class="card-body" id="answer_3">
                                 Er
                             </div>
                         </div>
-                        <div class="reply">
+                        <div class="reply" id="reply_4" onclick="answer('answer_4')">
                             <div class="abcd">
                                 <h1>D</h1>
                             </div>
-                            <div class="card-body">
+                            <div class="card-body" id="answer_4">
                                 Sie
                             </div>
                         </div>
@@ -106,7 +106,7 @@
         </div>
         <div class="arrow-container">
             <div class="arrow-background"><img class="arrow-go-back" src="/img/icons8-arrow-91-left.png"></div>
-            <div class="arrow-background"><img class="arrow-go-back" src="/img/icons8-arrow-91-reigth.png"></div>
+            <button class="arrow-background" onclick="noWay(), nextQuestion()" id="arrowNext"><img class="arrow-go-back" src="/img/icons8-arrow-91-reigth.png"></button>
         </div>
     </div>
 
