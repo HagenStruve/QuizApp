@@ -34,9 +34,9 @@ let questions = [
 ];
 
 let currentQustion = 0;
-
 let rigthquestions = 0;
-
+let rightAudio = new Audio('audio/right.mp3');
+let failAudio = new Audio('audio/fail.mp3');
 
 function init() {
     showQuestion()
@@ -45,22 +45,34 @@ function init() {
 
 function showQuestion() { /*Zeigt die Fragen und möglichen Antworten*/
 
-if (currentQustion >= questions.length) {
+    if (gameIsOver()) {
+      showEndScreen();
+    } else {
+       showNextQuestion();
+    }
+}
+
+function gameIsOver() {
+    return currentQustion >= questions.length
+}
+
+
+function showEndScreen() {
     document.getElementById('screen-finish-container').style = ``;
     document.getElementById('answer-screen').style = `display: none`;
 
     document.getElementById('score-fullnumber').innerHTML = questions.length;
     document.getElementById('score').innerHTML = rigthquestions;
-} else {
+}
 
+
+function showNextQuestion() {
     let question = questions[currentQustion];
-
     document.getElementById('questionText').innerHTML = question['question'];
     document.getElementById('answer_1').innerHTML = question['answer_1'];
     document.getElementById('answer_2').innerHTML = question['answer_2'];
     document.getElementById('answer_3').innerHTML = question['answer_3'];
     document.getElementById('answer_4').innerHTML = question['answer_4'];
-}
 }
 
 
@@ -69,18 +81,28 @@ function answer(selection) {
     let selectedQuestionNumber = selection.slice(-1); /*.slice(-1) nimmt den letzten Buchstaben oder Zahl von der ID die auf selction liegt, dann wird diese übergeben*/
     let idOFRightAnswer = `answer_${question['right_answer']}`; /*übergibt die ID von der richtigen Antwort*/
 
-    if (selectedQuestionNumber == question['right_answer']) { /*Wenn die Nummern von selectedQuestionNumber == question['right_answer'] übereinstimmen, dann wird Richtig ausgespielt*/
+    if (rightAnswerSelected(selectedQuestionNumber)) { /*Wenn die Nummern von selectedQuestionNumber == question['right_answer'] übereinstimmen, dann wird Richtig ausgespielt*/
         document.getElementById(selection).parentNode.childNodes[1].classList.add('rigth');  /*färbt den container grün*/
         document.getElementById(selection).parentNode.classList.add('rigth');  /*färbt den container grün*/
 
+        rightAudio.play();
         rigthquestions++;
+
+
     } else {
         document.getElementById(selection).parentNode.childNodes[1].classList.add('wrong'); /* färbt den continer rot*/
         document.getElementById(selection).parentNode.classList.add('wrong'); /* färbt den continer rot*/
         document.getElementById(idOFRightAnswer).parentNode.childNodes[1].classList.add('rigth');  /*färbt den container grün*/
         document.getElementById(idOFRightAnswer).parentNode.classList.add('rigth');  /*färbt den container grün*/
+
+        failAudio.play();
     }
     document.getElementById('arrowNext').disabeled = false;
+}
+
+
+function rightAnswerSelected(selectedQuestionNumber) {
+    return selectedQuestionNumber == question['right_answer']
 }
 
 
@@ -112,6 +134,17 @@ function resetAnswerButton() {
     document.getElementById('answer_4').parentNode.childNodes[1].classList.remove('rigth');  /*entfernt die farbe wieder*/
     document.getElementById('answer_4').parentNode.classList.remove('rigth'); /*entfernt die farbe wieder*/
     document.getElementById('answer_4').parentNode.childNodes[1].classList.remove('wrong');  /*entfernt die farbe wieder*/
+}
+
+
+function replay() {
+    document.getElementById('screen-finish-container').style = `display: none`;
+    document.getElementById('answer-screen').style = ``;
+
+    currentQustion = 0;
+    rigthquestions = 0;
+
+    init();
 }
 
 //function noWay() {
