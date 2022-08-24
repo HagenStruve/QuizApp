@@ -42,17 +42,19 @@
 
                 <div class="content" id="content">
 
-                    <!--<div class="welcom-page">
-                    <div>
-                        <h2>Wilkommen<br>zur QuizzApp</h1>
-                        <span>Bist du bereit?</span>
+                    <div id="screenWelcome" style="display: none;">
+                        <div>
+                            <h2>Wilkommen<br>zur QuizzApp</h1>
+                                <span>Bist du bereit?</span>
+                        </div>
+                        <div class="start-button-container">
+                            <button onclick="showQuestion()" type="button" class="btn btn-primary start-button ">Jetzt
+                                Starten<img src="/img/icons8-winkel-rechts-30.png"></button>
+                        </div>
                     </div>
-                    <div class="start-button-container">
-                        <button type="button" class="btn btn-primary start-button ">Jetzt Starten<img src="/img/icons8-winkel-rechts-30.png"></button>
-                    </div>-->
 
 
-                    <div class="card-body" id="answer-screen">
+                    <div class="card-body" id="answer-screen" style="display: none;">
                         <h2 class="card-title" id="questionText">Wer ist hier der Boss?</h2>
                         <div class="reply" id="reply_1" onclick="answer('answer_1')">
                             <div class="abcd">
@@ -109,7 +111,7 @@
                 </div>
             </div>
         </div>
-        <div class="arrow-container">
+        <div class="arrow-container" id="arrowContainer">
             <div class="arrow-background"><img class="arrow-go-back" src="/img/icons8-arrow-91-left.png"></div>
             <button class="arrow-background" onclick="nextQuestion()" id="arrowNext"><img class="arrow-go-back"
                     src="/img/icons8-arrow-91-reigth.png"></button>
