@@ -8,7 +8,7 @@ let questions = [
         "right_answer": 4
     },
     {
-        "question": "Wer ist hier der Boss?",
+        "question": "Hast du was gegessen??",
         "answer_1": "Ich",
         "answer_2": "Du",
         "answer_3": "Er",
@@ -16,7 +16,7 @@ let questions = [
         "right_answer": 4
     },
     {
-        "question": "Wer ist hier der Boss?",
+        "question": "Wer sagt hier OK?",
         "answer_1": "Ich",
         "answer_2": "Du",
         "answer_3": "Er",
@@ -24,7 +24,7 @@ let questions = [
         "right_answer": 1
     },
     {
-        "question": "Wer ist hier der Boss?",
+        "question": "Wer hat was gesagt?",
         "answer_1": "Ich",
         "answer_2": "Du",
         "answer_3": "Er",
@@ -35,6 +35,8 @@ let questions = [
 
 let currentQustion = 0;
 
+let rigthquestions = 0;
+
 
 function init() {
     showQuestion()
@@ -42,8 +44,16 @@ function init() {
 
 
 function showQuestion() { /*Zeigt die Fragen und möglichen Antworten*/
+
+if (currentQustion >= questions.length) {
+    document.getElementById('screen-finish-container').style = ``;
+    document.getElementById('answer-screen').style = `display: none`;
+
+    document.getElementById('score-fullnumber').innerHTML = questions.length;
+    document.getElementById('score').innerHTML = rigthquestions;
+} else {
+
     let question = questions[currentQustion];
-    question['question']
 
     document.getElementById('questionText').innerHTML = question['question'];
     document.getElementById('answer_1').innerHTML = question['answer_1'];
@@ -51,6 +61,8 @@ function showQuestion() { /*Zeigt die Fragen und möglichen Antworten*/
     document.getElementById('answer_3').innerHTML = question['answer_3'];
     document.getElementById('answer_4').innerHTML = question['answer_4'];
 }
+}
+
 
 function answer(selection) {
     let question = questions[currentQustion]; /*übergibt question ein Element aus dem Array questions. [currentQustion] sagt , dass das 0te Element genommen werden soll (siehe oben)*/
@@ -60,6 +72,8 @@ function answer(selection) {
     if (selectedQuestionNumber == question['right_answer']) { /*Wenn die Nummern von selectedQuestionNumber == question['right_answer'] übereinstimmen, dann wird Richtig ausgespielt*/
         document.getElementById(selection).parentNode.childNodes[1].classList.add('rigth');  /*färbt den container grün*/
         document.getElementById(selection).parentNode.classList.add('rigth');  /*färbt den container grün*/
+
+        rigthquestions++;
     } else {
         document.getElementById(selection).parentNode.childNodes[1].classList.add('wrong'); /* färbt den continer rot*/
         document.getElementById(selection).parentNode.classList.add('wrong'); /* färbt den continer rot*/
@@ -100,6 +114,6 @@ function resetAnswerButton() {
     document.getElementById('answer_4').parentNode.childNodes[1].classList.remove('wrong');  /*entfernt die farbe wieder*/
 }
 
-function noWay() {
-    alert('Bitte wähle erst eine Antwort');
-}
+//function noWay() {
+//    alert('Bitte wähle erst eine Antwort');
+//}

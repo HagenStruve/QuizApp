@@ -1,6 +1,7 @@
 body {
     background-color: rgb(254, 250, 239) !important;
     font-family: 'rubik';
+    margin: 0px;
 }
 
 
@@ -220,4 +221,9 @@ body {
 
 .wrong {
     background-color: rgb(255, 163, 164);
+}
+
+.tropy {
+    position: fixed;
+    right: 0;
 }
