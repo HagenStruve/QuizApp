@@ -1,30 +1,64 @@
 let questions = [
     {
-        "question": "Wer ist hier der Boss?",
+        "question": "HTML Wer ist hier der Boss?",
         "answer_1": "ES",
-        "answer_2": "Du",
-        "answer_3": "Er",
-        "answer_4": "Sie",
-        "right_answer": 4
-    },
-    {
-        "question": "Hast du was gegessen??",
-        "answer_1": "Ich",
-        "answer_2": "Du",
-        "answer_3": "Er",
-        "answer_4": "Sie",
-        "right_answer": 4
-    },
-    {
-        "question": "Wer sagt hier OK?",
-        "answer_1": "Ich",
         "answer_2": "Du",
         "answer_3": "Er",
         "answer_4": "Sie",
         "right_answer": 1
     },
     {
-        "question": "Wer hat was gesagt?",
+        "question": "HTML Hast du was gegessen??",
+        "answer_1": "Ich",
+        "answer_2": "Du",
+        "answer_3": "Er",
+        "answer_4": "Sie",
+        "right_answer": 2
+    },
+    {
+        "question": "HTML Wer sagt hier OK?",
+        "answer_1": "Ich",
+        "answer_2": "Du",
+        "answer_3": "Er",
+        "answer_4": "Sie",
+        "right_answer": 3
+    },
+    {
+        "question": "HTML Wer hat was gesagt?",
+        "answer_1": "Ich",
+        "answer_2": "Du",
+        "answer_3": "Er",
+        "answer_4": "Sie",
+        "right_answer": 4
+    }
+];
+let questionsCSS = [
+    {
+        "question": "css Wer ist hier der Boss?",
+        "answer_1": "ES",
+        "answer_2": "Du",
+        "answer_3": "Er",
+        "answer_4": "Sie",
+        "right_answer": 2
+    },
+    {
+        "question": "css Hast du was gegessen??",
+        "answer_1": "Ich",
+        "answer_2": "Du",
+        "answer_3": "Er",
+        "answer_4": "Sie",
+        "right_answer": 3
+    },
+    {
+        "question": "css Wer sagt hier OK?",
+        "answer_1": "Ich",
+        "answer_2": "Du",
+        "answer_3": "Er",
+        "answer_4": "Sie",
+        "right_answer": 4
+    },
+    {
+        "question": "css Wer hat was gesagt?",
         "answer_1": "Ich",
         "answer_2": "Du",
         "answer_3": "Er",
@@ -32,6 +66,75 @@ let questions = [
         "right_answer": 3
     }
 ];
+let questionsJS = [
+    {
+        "question": "JS Wer ist hier der Boss?",
+        "answer_1": "ES",
+        "answer_2": "Du",
+        "answer_3": "Er",
+        "answer_4": "Sie",
+        "right_answer": 3
+    },
+    {
+        "question": "JS Hast du was gegessen??",
+        "answer_1": "Ich",
+        "answer_2": "Du",
+        "answer_3": "Er",
+        "answer_4": "Sie",
+        "right_answer": 4
+    },
+    {
+        "question": "JS Wer sagt hier OK?",
+        "answer_1": "Ich",
+        "answer_2": "Du",
+        "answer_3": "Er",
+        "answer_4": "Sie",
+        "right_answer": 1
+    },
+    {
+        "question": "JS Wer hat was gesagt?",
+        "answer_1": "Ich",
+        "answer_2": "Du",
+        "answer_3": "Er",
+        "answer_4": "Sie",
+        "right_answer": 2
+    }
+];
+let questionsJAVA = [
+    {
+        "question": "JAVA Wer ist hier der Boss?",
+        "answer_1": "ES",
+        "answer_2": "Du",
+        "answer_3": "Er",
+        "answer_4": "Sie",
+        "right_answer": 4
+    },
+    {
+        "question": "JAVA Hast du was gegessen??",
+        "answer_1": "Ich",
+        "answer_2": "Du",
+        "answer_3": "Er",
+        "answer_4": "Sie",
+        "right_answer": 1
+    },
+    {
+        "question": "JAVA Wer sagt hier OK?",
+        "answer_1": "Ich",
+        "answer_2": "Du",
+        "answer_3": "Er",
+        "answer_4": "Sie",
+        "right_answer": 2
+    },
+    {
+        "question": "JAVA Wer hat was gesagt?",
+        "answer_1": "Ich",
+        "answer_2": "Du",
+        "answer_3": "Er",
+        "answer_4": "Sie",
+        "right_answer": 3
+    }
+];
+
 
 let currentQustion = 0;
 let rigthquestions = 0;
@@ -155,6 +258,98 @@ function replay() {
     showQuestion()
 }
 
-//function noWay() {
-//    alert('Bitte wähle erst eine Antwort');
-//}
+
+function showHTMLQuestion() {
+    document.getElementById('screenWelcome').style = `display: none`;
+document.getElementById('answer-screen').style = ``;
+document.getElementById('arrowContainer').style = ``;
+
+    if (gameIsOver()) {
+      showEndScreen();
+    } else {
+        showNextQuestionHTML();
+    }
+
+}
+
+
+function showNextQuestionHTML() {
+    let question = questionsCSS[currentQustion];
+    document.getElementById('questionText').innerHTML = question['question'];
+    document.getElementById('answer_1').innerHTML = question['answer_1'];
+    document.getElementById('answer_2').innerHTML = question['answer_2'];
+    document.getElementById('answer_3').innerHTML = question['answer_3'];
+    document.getElementById('answer_4').innerHTML = question['answer_4'];
+}
+
+
+function showCSSQuestion() {
+    document.getElementById('screenWelcome').style = `display: none`;
+document.getElementById('answer-screen').style = ``;
+document.getElementById('arrowContainer').style = ``;
+
+    if (gameIsOver()) {
+      showEndScreen();
+    } else {
+       showNextQuestionCSS();
+    }
+
+}
+
+
+function showNextQuestionCSS() {
+    let question = questionsJS[currentQustion];
+    document.getElementById('questionText').innerHTML = question['question'];
+    document.getElementById('answer_1').innerHTML = question['answer_1'];
+    document.getElementById('answer_2').innerHTML = question['answer_2'];
+    document.getElementById('answer_3').innerHTML = question['answer_3'];
+    document.getElementById('answer_4').innerHTML = question['answer_4'];
+}
+
+
+function showJSQuestion() {
+    document.getElementById('screenWelcome').style = `display: none`;
+document.getElementById('answer-screen').style = ``;
+document.getElementById('arrowContainer').style = ``;
+
+    if (gameIsOver()) {
+      showEndScreen();
+    } else {
+       showNextQuestionJS();
+    }
+
+}
+
+
+function showNextQuestionJS() {
+    let question = questionsJAVA[currentQustion];
+    document.getElementById('questionText').innerHTML = question['question'];
+    document.getElementById('answer_1').innerHTML = question['answer_1'];
+    document.getElementById('answer_2').innerHTML = question['answer_2'];
+    document.getElementById('answer_3').innerHTML = question['answer_3'];
+    document.getElementById('answer_4').innerHTML = question['answer_4'];
+}
+
+
+function showJAVAQuestion() {
+    document.getElementById('screenWelcome').style = `display: none`;
+document.getElementById('answer-screen').style = ``;
+document.getElementById('arrowContainer').style = ``;
+
+    if (gameIsOver()) {
+      showEndScreen();
+    } else {
+       showNextQuestionJAVA();
+    }
+
+}
+
+
+function showNextQuestionJAVA() {
+    let question = questions[currentQustion];
+    document.getElementById('questionText').innerHTML = question['question'];
+    document.getElementById('answer_1').innerHTML = question['answer_1'];
+    document.getElementById('answer_2').innerHTML = question['answer_2'];
+    document.getElementById('answer_3').innerHTML = question['answer_3'];
+    document.getElementById('answer_4').innerHTML = question['answer_4'];
+}
