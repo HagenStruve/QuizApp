@@ -1,137 +1,137 @@
 let questions = [
     {
-        "question": "HTML Wer ist hier der Boss?",
-        "answer_1": "ES",
-        "answer_2": "Du",
-        "answer_3": "Er",
-        "answer_4": "Sie",
+        "question": "Wer hat HTML erfunden?",
+        "answer_1": "Tim Berners-Lee",
+        "answer_2": "Ich",
+        "answer_3": "Der Terminator",
+        "answer_4": "Albert Einstein",
         "right_answer": 1
     },
     {
-        "question": "HTML Hast du was gegessen??",
-        "answer_1": "Ich",
-        "answer_2": "Du",
-        "answer_3": "Er",
-        "answer_4": "Sie",
-        "right_answer": 2
-    },
-    {
-        "question": "HTML Wer sagt hier OK?",
-        "answer_1": "Ich",
-        "answer_2": "Du",
-        "answer_3": "Er",
-        "answer_4": "Sie",
+        "question": "Was ist ein Inhaltsleeres Element?",
+        "answer_1": " < span > ",
+        "answer_2": " < div > ",
+        "answer_3": " < br > ",
+        "answer_4": " < body > ",
         "right_answer": 3
     },
     {
-        "question": "HTML Wer hat was gesagt?",
-        "answer_1": "Ich",
-        "answer_2": "Du",
-        "answer_3": "Er",
-        "answer_4": "Sie",
+        "question": "Was für eine Sprache ist HTML?",
+        "answer_1": "Programmiersprache",
+        "answer_2": "Englisch",
+        "answer_3": "Deutsch",
+        "answer_4": "Auszeichnungssprache",
         "right_answer": 4
+    },
+    {
+        "question": "Was ist ein tag in HTML?",
+        "answer_1": "Wenn es draußen hell ist",
+        "answer_2": "Der Programmierer",
+        "answer_3": "eine Anweisung",
+        "answer_4": "ein Befehl, der Licht auf die Webseite bringt",
+        "right_answer": 3
     }
 ];
 let questionsCSS = [
     {
-        "question": "css Wer ist hier der Boss?",
-        "answer_1": "ES",
-        "answer_2": "Du",
-        "answer_3": "Er",
-        "answer_4": "Sie",
+        "question": "Wer hat CSS erfunden?",
+        "answer_1": "Albert Einstein",
+        "answer_2": "Hakon Wium Lie",
+        "answer_3": "Stephen Hawking",
+        "answer_4": "ein Computer",
         "right_answer": 2
     },
     {
-        "question": "css Hast du was gegessen??",
-        "answer_1": "Ich",
-        "answer_2": "Du",
-        "answer_3": "Er",
-        "answer_4": "Sie",
+        "question": "Wer hat auch noch an CSS gearbeitet?",
+        "answer_1": "Niemand",
+        "answer_2": "Albert Einstein",
+        "answer_3": "Bert Bos",
+        "answer_4": "Stephen Hawking",
         "right_answer": 3
     },
     {
-        "question": "css Wer sagt hier OK?",
-        "answer_1": "Ich",
-        "answer_2": "Du",
-        "answer_3": "Er",
-        "answer_4": "Sie",
+        "question": "Wofür steht CSS?",
+        "answer_1": "den Style gestalten",
+        "answer_2": "Cascading Sheets",
+        "answer_3": "Cascading Style",
+        "answer_4": "Cascading Style Sheets",
         "right_answer": 4
     },
     {
-        "question": "css Wer hat was gesagt?",
-        "answer_1": "Ich",
-        "answer_2": "Du",
-        "answer_3": "Er",
-        "answer_4": "Sie",
+        "question": "Wozu wird CSS benötigt?",
+        "answer_1": "für die Logik",
+        "answer_2": "für die Grundstruktur einer Webseite",
+        "answer_3": "für das Disign",
+        "answer_4": "um die Verbindung zu anderen Webseiten aufzubauen",
         "right_answer": 3
     }
 ];
 let questionsJS = [
     {
-        "question": "JS Wer ist hier der Boss?",
-        "answer_1": "ES",
-        "answer_2": "Du",
-        "answer_3": "Er",
-        "answer_4": "Sie",
+        "question": "Wer hat Javascript entwickelt?",
+        "answer_1": "Apple",
+        "answer_2": "Jeff Bazos",
+        "answer_3": "Netscape",
+        "answer_4": "eine freie Gruppe von Programmierern",
         "right_answer": 3
     },
     {
-        "question": "JS Hast du was gegessen??",
-        "answer_1": "Ich",
-        "answer_2": "Du",
-        "answer_3": "Er",
-        "answer_4": "Sie",
+        "question": "Wozu wird Javascript verwendet?",
+        "answer_1": "für die Grundstruktur einer Webseite",
+        "answer_2": "für das Disign",
+        "answer_3": "um die Verbindung zu anderen Webseiten aufzubauen",
+        "answer_4": "für die Logik",
         "right_answer": 4
     },
     {
-        "question": "JS Wer sagt hier OK?",
-        "answer_1": "Ich",
-        "answer_2": "Du",
-        "answer_3": "Er",
-        "answer_4": "Sie",
+        "question": "Was ist Javascript für eine Sprache?",
+        "answer_1": "Programmiersprache",
+        "answer_2": "Französisch",
+        "answer_3": "Gebärdensprache",
+        "answer_4": "Auszeichnungssprache",
         "right_answer": 1
     },
     {
-        "question": "JS Wer hat was gesagt?",
-        "answer_1": "Ich",
-        "answer_2": "Du",
-        "answer_3": "Er",
-        "answer_4": "Sie",
+        "question": "Was wird in Javascript verwendet?",
+        "answer_1": "tags",
+        "answer_2": "function",
+        "answer_3": "classen",
+        "answer_4": "<div>",
         "right_answer": 2
     }
 ];
 let questionsJAVA = [
     {
-        "question": "JAVA Wer ist hier der Boss?",
-        "answer_1": "ES",
-        "answer_2": "Du",
-        "answer_3": "Er",
-        "answer_4": "Sie",
+        "question": "Wer hat Java erfunden?",
+        "answer_1": "eine künstliche Intelligenz",
+        "answer_2": "Netscape",
+        "answer_3": "Hakon Wium Lie",
+        "answer_4": "James Gosling",
         "right_answer": 4
     },
     {
-        "question": "JAVA Hast du was gegessen??",
-        "answer_1": "Ich",
-        "answer_2": "Du",
-        "answer_3": "Er",
-        "answer_4": "Sie",
+        "question": "Was ist Java?",
+        "answer_1": "objektorientierten Programmiersprache",
+        "answer_2": "eine Syntax",
+        "answer_3": "ein Programm",
+        "answer_4": "ein Script",
         "right_answer": 1
     },
     {
-        "question": "JAVA Wer sagt hier OK?",
-        "answer_1": "Ich",
-        "answer_2": "Du",
-        "answer_3": "Er",
-        "answer_4": "Sie",
+        "question": "Wann ist Java erschienen?",
+        "answer_1": "1990",
+        "answer_2": "1995",
+        "answer_3": "1950",
+        "answer_4": "2001",
         "right_answer": 2
     },
     {
-        "question": "JAVA Wer hat was gesagt?",
-        "answer_1": "Ich",
-        "answer_2": "Du",
-        "answer_3": "Er",
-        "answer_4": "Sie",
-        "right_answer": 3
+        "question": "Wozu wird Java genutzt?",
+        "answer_1": "Programme schreiben",
+        "answer_2": "scripte schreiben",
+        "answer_3": "als Taschenrechner",
+        "answer_4": "zum Disignen",
+        "right_answer": 1
     }
 ];
 
@@ -184,6 +184,7 @@ function showNextQuestion() {
     document.getElementById('answer_3').innerHTML = question['answer_3'];
     document.getElementById('answer_4').innerHTML = question['answer_4'];
 }
+
 
 
 function answer(selection) {
@@ -267,14 +268,13 @@ document.getElementById('arrowContainer').style = ``;
     if (gameIsOver()) {
       showEndScreen();
     } else {
-        showNextQuestionHTML();
+        showNextQuestion();
     }
-
 }
 
 
 function showNextQuestionHTML() {
-    let question = questionsCSS[currentQustion];
+    let question = questions[currentQustion];
     document.getElementById('questionText').innerHTML = question['question'];
     document.getElementById('answer_1').innerHTML = question['answer_1'];
     document.getElementById('answer_2').innerHTML = question['answer_2'];
@@ -292,13 +292,20 @@ document.getElementById('arrowContainer').style = ``;
       showEndScreen();
     } else {
        showNextQuestionCSS();
+       nextQuestionCSS(i);
     }
+}
 
+function nextQuestionCSS(i) {
+    document.getElementById('arrowContainer').innerHTML = ``;
+    document.getElementById('arrowContainer').innerHTML = /*html*/`  <div class="arrow-background"><img class="arrow-go-back" src="img/icons8-arrow-91-left.png"></div>
+    <button class="arrow-background" onclick="nextQuestion(i)" id="arrowNext"><img class="arrow-go-back"
+            src="img/icons8-arrow-91-reigth.png"></button>`;
 }
 
 
 function showNextQuestionCSS() {
-    let question = questionsJS[currentQustion];
+    let question = questionsCSS[currentQustion];
     document.getElementById('questionText').innerHTML = question['question'];
     document.getElementById('answer_1').innerHTML = question['answer_1'];
     document.getElementById('answer_2').innerHTML = question['answer_2'];
@@ -311,6 +318,11 @@ function showJSQuestion() {
     document.getElementById('screenWelcome').style = `display: none`;
 document.getElementById('answer-screen').style = ``;
 document.getElementById('arrowContainer').style = ``;
+document.getElementById('arrowContainer').innerHTML = ``
+document.getElementById('arrowContainer').innerHTML = /*HTML*/`
+<div class="arrow-background"><img class="arrow-go-back" src="img/icons8-arrow-91-left.png"></div>
+<button class="arrow-background" onclick="nextQuestion()" id="arrowNext"><img class="arrow-go-back"
+        src="img/icons8-arrow-91-reigth.png"></button>`;
 
     if (gameIsOver()) {
       showEndScreen();
@@ -322,7 +334,7 @@ document.getElementById('arrowContainer').style = ``;
 
 
 function showNextQuestionJS() {
-    let question = questionsJAVA[currentQustion];
+    let question = questionsJS[currentQustion];
     document.getElementById('questionText').innerHTML = question['question'];
     document.getElementById('answer_1').innerHTML = question['answer_1'];
     document.getElementById('answer_2').innerHTML = question['answer_2'];
@@ -346,7 +358,7 @@ document.getElementById('arrowContainer').style = ``;
 
 
 function showNextQuestionJAVA() {
-    let question = questions[currentQustion];
+    let question = questionsJAVA[currentQustion];
     document.getElementById('questionText').innerHTML = question['question'];
     document.getElementById('answer_1').innerHTML = question['answer_1'];
     document.getElementById('answer_2').innerHTML = question['answer_2'];
