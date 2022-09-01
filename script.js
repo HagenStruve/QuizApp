@@ -161,7 +161,7 @@ document.getElementById('arrowContainer').style = ``;
 }
 
 function gameIsOver() {
-    return currentQustion >= questions.length
+    return currentQustion >= questions.length;
 }
 
 
@@ -260,6 +260,9 @@ function replay() {
 }
 
 
+///////////////////////////////////////////////////////////////////////// HTML Question ////////////////////////////////////////////////////////////////////////////////////////
+
+
 function showHTMLQuestion() {
     document.getElementById('screenWelcome').style = `display: none`;
 document.getElementById('answer-screen').style = ``;
@@ -268,7 +271,7 @@ document.getElementById('arrowContainer').style = ``;
     if (gameIsOver()) {
       showEndScreen();
     } else {
-        showNextQuestion();
+        showNextQuestionHTML();
     }
 }
 
@@ -283,6 +286,17 @@ function showNextQuestionHTML() {
 }
 
 
+function nextQuestion() {
+    currentQustion++; /* erweitert currentQuestion um 1*/
+    document.getElementById('arrowNext').disabeled = true;
+    resetAnswerButton();
+    showQuestion();
+}
+
+
+///////////////////////////////////////////////////////////////////////// CSS Question ////////////////////////////////////////////////////////////////////////////////////////
+
+
 function showCSSQuestion() {
     document.getElementById('screenWelcome').style = `display: none`;
 document.getElementById('answer-screen').style = ``;
@@ -292,14 +306,14 @@ document.getElementById('arrowContainer').style = ``;
       showEndScreen();
     } else {
        showNextQuestionCSS();
-       nextQuestionCSS(i);
+       nextQuestionButtonCSS();
     }
 }
 
-function nextQuestionCSS(i) {
+function nextQuestionButtonCSS() {
     document.getElementById('arrowContainer').innerHTML = ``;
     document.getElementById('arrowContainer').innerHTML = /*html*/`  <div class="arrow-background"><img class="arrow-go-back" src="img/icons8-arrow-91-left.png"></div>
-    <button class="arrow-background" onclick="nextQuestion(i)" id="arrowNext"><img class="arrow-go-back"
+    <button class="arrow-background" onclick="nextQuestionCSS()" id="arrowNext"><img class="arrow-go-back"
             src="img/icons8-arrow-91-reigth.png"></button>`;
 }
 
@@ -312,6 +326,16 @@ function showNextQuestionCSS() {
     document.getElementById('answer_3').innerHTML = question['answer_3'];
     document.getElementById('answer_4').innerHTML = question['answer_4'];
 }
+
+
+function nextQuestionCSS() {
+    currentQustion++; /* erweitert currentQuestion um 1*/
+    document.getElementById('arrowNext').disabeled = true;
+    resetAnswerButton();
+    showCSSQuestion();
+}
+
+///////////////////////////////////////////////////////////////////////// JS Question ////////////////////////////////////////////////////////////////////////////////////////
 
 
 function showJSQuestion() {
@@ -328,8 +352,8 @@ document.getElementById('arrowContainer').innerHTML = /*HTML*/`
       showEndScreen();
     } else {
        showNextQuestionJS();
+       nextQuestionButtonJS();
     }
-
 }
 
 
@@ -343,6 +367,24 @@ function showNextQuestionJS() {
 }
 
 
+function nextQuestionButtonJS() {
+    document.getElementById('arrowContainer').innerHTML = ``;
+    document.getElementById('arrowContainer').innerHTML = /*html*/`  <div class="arrow-background"><img class="arrow-go-back" src="img/icons8-arrow-91-left.png"></div>
+    <button class="arrow-background" onclick="nextQuestionJS()" id="arrowNext"><img class="arrow-go-back"
+            src="img/icons8-arrow-91-reigth.png"></button>`;
+}
+
+
+function nextQuestionJS() {
+    currentQustion++; /* erweitert currentQuestion um 1*/
+    document.getElementById('arrowNext').disabeled = true;
+    resetAnswerButton();
+    showJSQuestion();
+}
+
+///////////////////////////////////////////////////////////////////////// JAVA Question ////////////////////////////////////////////////////////////////////////////////////////
+
+
 function showJAVAQuestion() {
     document.getElementById('screenWelcome').style = `display: none`;
 document.getElementById('answer-screen').style = ``;
@@ -352,6 +394,7 @@ document.getElementById('arrowContainer').style = ``;
       showEndScreen();
     } else {
        showNextQuestionJAVA();
+       nextQuestionButtonJAVA();
     }
 
 }
@@ -364,4 +407,20 @@ function showNextQuestionJAVA() {
     document.getElementById('answer_2').innerHTML = question['answer_2'];
     document.getElementById('answer_3').innerHTML = question['answer_3'];
     document.getElementById('answer_4').innerHTML = question['answer_4'];
+}
+
+
+function nextQuestionButtonJAVA() {
+    document.getElementById('arrowContainer').innerHTML = ``;
+    document.getElementById('arrowContainer').innerHTML = /*html*/`  <div class="arrow-background"><img class="arrow-go-back" src="img/icons8-arrow-91-left.png"></div>
+    <button class="arrow-background" onclick="nextQuestionJAVA()" id="arrowNext"><img class="arrow-go-back"
+            src="img/icons8-arrow-91-reigth.png"></button>`;
+}
+
+
+function nextQuestionJAVA() {
+    currentQustion++; /* erweitert currentQuestion um 1*/
+    document.getElementById('arrowNext').disabeled = true;
+    resetAnswerButton();
+    showJAVAQuestion();
 }
