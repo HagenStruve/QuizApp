@@ -96,7 +96,7 @@ let questionsJS = [
         "answer_1": "tags",
         "answer_2": "function",
         "answer_3": "classen",
-        "answer_4": "<div>",
+        "answer_4": " < div > ",
         "right_answer": 2
     }
 ];
@@ -148,15 +148,15 @@ function init() {
 
 
 function showQuestion() { /*Zeigt die Fragen und möglichen Antworten*/
-
-document.getElementById('screenWelcome').style = `display: none`;
-document.getElementById('answer-screen').style = ``;
-document.getElementById('arrowContainer').style = ``;
+    document.getElementById('arrowNext').style.pointerEvents = "none";
+    document.getElementById('screenWelcome').style = `display: none`;
+    document.getElementById('answer-screen').style = ``;
+    document.getElementById('arrowContainer').style = ``;
 
     if (gameIsOver()) {
-      showEndScreen();
+        showEndScreen();
     } else {
-       showNextQuestion();
+        showNextQuestion();
     }
 }
 
@@ -208,7 +208,11 @@ function answer(selection) {
 
         failAudio.play();
     }
-    document.getElementById('arrowNext').disabeled = false;
+    document.getElementById('arrowNext').style.pointerEvents = "";
+    document.getElementById('reply_1').style.pointerEvents = "none";
+    document.getElementById('reply_2').style.pointerEvents = "none";
+    document.getElementById('reply_3').style.pointerEvents = "none";
+    document.getElementById('reply_4').style.pointerEvents = "none";
 }
 
 
@@ -265,14 +269,24 @@ function replay() {
 
 function showHTMLQuestion() {
     document.getElementById('screenWelcome').style = `display: none`;
-document.getElementById('answer-screen').style = ``;
-document.getElementById('arrowContainer').style = ``;
+    document.getElementById('answer-screen').style = ``;
+    document.getElementById('arrowContainer').style = ``;
+
+    navigationBorderHTML()
 
     if (gameIsOver()) {
-      showEndScreen();
+        showEndScreen();
     } else {
         showNextQuestionHTML();
     }
+}
+
+
+function navigationBorderHTML() {
+    document.getElementById('navigation-containerHTML').classList.add('navigation-container-borderleft');
+    document.getElementById('navigation-containerCSS').classList.remove('navigation-container-borderleft');
+    document.getElementById('navigation-containerJS').classList.remove('navigation-container-borderleft');
+    document.getElementById('navigation-containerJAVA').classList.remove('navigation-container-borderleft');
 }
 
 
@@ -288,7 +302,11 @@ function showNextQuestionHTML() {
 
 function nextQuestion() {
     currentQustion++; /* erweitert currentQuestion um 1*/
-    document.getElementById('arrowNext').disabeled = true;
+    document.getElementById('arrowNext').style.pointerEvents = "none";
+    document.getElementById('reply_1').style.pointerEvents = "";
+    document.getElementById('reply_2').style.pointerEvents = "";
+    document.getElementById('reply_3').style.pointerEvents = "";
+    document.getElementById('reply_4').style.pointerEvents = "";
     resetAnswerButton();
     showQuestion();
 }
@@ -299,21 +317,32 @@ function nextQuestion() {
 
 function showCSSQuestion() {
     document.getElementById('screenWelcome').style = `display: none`;
-document.getElementById('answer-screen').style = ``;
-document.getElementById('arrowContainer').style = ``;
+    document.getElementById('answer-screen').style = ``;
+    document.getElementById('arrowContainer').style = ``;
+ 
+    navigationBorderCSS()
 
     if (gameIsOver()) {
-      showEndScreen();
+        showEndScreen();
     } else {
-       showNextQuestionCSS();
-       nextQuestionButtonCSS();
+        showNextQuestionCSS();
+        nextQuestionButtonCSS();
     }
 }
+
+
+function navigationBorderCSS() {
+    document.getElementById('navigation-containerHTML').classList.remove('navigation-container-borderleft');
+    document.getElementById('navigation-containerCSS').classList.add('navigation-container-borderleft');
+    document.getElementById('navigation-containerJS').classList.remove('navigation-container-borderleft');
+    document.getElementById('navigation-containerJAVA').classList.remove('navigation-container-borderleft');
+}
+
 
 function nextQuestionButtonCSS() {
     document.getElementById('arrowContainer').innerHTML = ``;
     document.getElementById('arrowContainer').innerHTML = /*html*/`  <div class="arrow-background"><img class="arrow-go-back" src="img/icons8-arrow-91-left.png"></div>
-    <button class="arrow-background" onclick="nextQuestionCSS()" id="arrowNext"><img class="arrow-go-back"
+    <button class="arrow-background" disabeled onclick="nextQuestionCSS()" id="arrowNext"><img class="arrow-go-back"
             src="img/icons8-arrow-91-reigth.png"></button>`;
 }
 
@@ -330,7 +359,11 @@ function showNextQuestionCSS() {
 
 function nextQuestionCSS() {
     currentQustion++; /* erweitert currentQuestion um 1*/
-    document.getElementById('arrowNext').disabeled = true;
+    document.getElementById('arrowNext').style.pointerEvents = "none";
+    document.getElementById('reply_1').style.pointerEvents = "";
+    document.getElementById('reply_2').style.pointerEvents = "";
+    document.getElementById('reply_3').style.pointerEvents = "";
+    document.getElementById('reply_4').style.pointerEvents = "";
     resetAnswerButton();
     showCSSQuestion();
 }
@@ -340,21 +373,28 @@ function nextQuestionCSS() {
 
 function showJSQuestion() {
     document.getElementById('screenWelcome').style = `display: none`;
-document.getElementById('answer-screen').style = ``;
-document.getElementById('arrowContainer').style = ``;
-document.getElementById('arrowContainer').innerHTML = ``
-document.getElementById('arrowContainer').innerHTML = /*HTML*/`
-<div class="arrow-background"><img class="arrow-go-back" src="img/icons8-arrow-91-left.png"></div>
-<button class="arrow-background" onclick="nextQuestion()" id="arrowNext"><img class="arrow-go-back"
-        src="img/icons8-arrow-91-reigth.png"></button>`;
+    document.getElementById('answer-screen').style = ``;
+    document.getElementById('arrowContainer').style = ``;
+
+    navigationBorderJS()
 
     if (gameIsOver()) {
-      showEndScreen();
+        showEndScreen();
     } else {
-       showNextQuestionJS();
-       nextQuestionButtonJS();
+        showNextQuestionJS();
+        nextQuestionButtonJS();
     }
 }
+
+
+function navigationBorderJS() {
+    document.getElementById('navigation-containerHTML').classList.remove('navigation-container-borderleft');
+    document.getElementById('navigation-containerCSS').classList.remove('navigation-container-borderleft');
+    document.getElementById('navigation-containerJS').classList.add('navigation-container-borderleft');
+    document.getElementById('navigation-containerJAVA').classList.remove('navigation-container-borderleft');
+}
+
+
 
 
 function showNextQuestionJS() {
@@ -370,14 +410,18 @@ function showNextQuestionJS() {
 function nextQuestionButtonJS() {
     document.getElementById('arrowContainer').innerHTML = ``;
     document.getElementById('arrowContainer').innerHTML = /*html*/`  <div class="arrow-background"><img class="arrow-go-back" src="img/icons8-arrow-91-left.png"></div>
-    <button class="arrow-background" onclick="nextQuestionJS()" id="arrowNext"><img class="arrow-go-back"
+    <button class="arrow-background" disabeled onclick="nextQuestionJS()" id="arrowNext"><img class="arrow-go-back"
             src="img/icons8-arrow-91-reigth.png"></button>`;
 }
 
 
 function nextQuestionJS() {
     currentQustion++; /* erweitert currentQuestion um 1*/
-    document.getElementById('arrowNext').disabeled = true;
+    document.getElementById('arrowNext').style.pointerEvents = "none";
+    document.getElementById('reply_1').style.pointerEvents = "";
+    document.getElementById('reply_2').style.pointerEvents = "";
+    document.getElementById('reply_3').style.pointerEvents = "";
+    document.getElementById('reply_4').style.pointerEvents = "";
     resetAnswerButton();
     showJSQuestion();
 }
@@ -387,16 +431,25 @@ function nextQuestionJS() {
 
 function showJAVAQuestion() {
     document.getElementById('screenWelcome').style = `display: none`;
-document.getElementById('answer-screen').style = ``;
-document.getElementById('arrowContainer').style = ``;
+    document.getElementById('answer-screen').style = ``;
+    document.getElementById('arrowContainer').style = ``;
+
+    navigationBorderJAVA()
 
     if (gameIsOver()) {
-      showEndScreen();
+        showEndScreen();
     } else {
-       showNextQuestionJAVA();
-       nextQuestionButtonJAVA();
+        showNextQuestionJAVA();
+        nextQuestionButtonJAVA();
     }
+}
 
+
+function navigationBorderJAVA() {
+    document.getElementById('navigation-containerHTML').classList.remove('navigation-container-borderleft');
+    document.getElementById('navigation-containerCSS').classList.remove('navigation-container-borderleft');
+    document.getElementById('navigation-containerJS').classList.remove('navigation-container-borderleft');
+    document.getElementById('navigation-containerJAVA').classList.add('navigation-container-borderleft');
 }
 
 
@@ -413,14 +466,18 @@ function showNextQuestionJAVA() {
 function nextQuestionButtonJAVA() {
     document.getElementById('arrowContainer').innerHTML = ``;
     document.getElementById('arrowContainer').innerHTML = /*html*/`  <div class="arrow-background"><img class="arrow-go-back" src="img/icons8-arrow-91-left.png"></div>
-    <button class="arrow-background" onclick="nextQuestionJAVA()" id="arrowNext"><img class="arrow-go-back"
+    <button class="arrow-background" disabeled onclick="nextQuestionJAVA()" id="arrowNext"><img class="arrow-go-back"
             src="img/icons8-arrow-91-reigth.png"></button>`;
 }
 
 
 function nextQuestionJAVA() {
     currentQustion++; /* erweitert currentQuestion um 1*/
-    document.getElementById('arrowNext').disabeled = true;
+    document.getElementById('arrowNext').style.pointerEvents = "none";
+    document.getElementById('reply_1').style.pointerEvents = "";
+    document.getElementById('reply_2').style.pointerEvents = "";
+    document.getElementById('reply_3').style.pointerEvents = "";
+    document.getElementById('reply_4').style.pointerEvents = "";
     resetAnswerButton();
     showJAVAQuestion();
 }

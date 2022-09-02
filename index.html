@@ -21,8 +21,26 @@
                 <div class="col-md-4">
                     <img class="sid-bar-img" src="img/logo.png">
                     <div class="sid-bar-categorie">
+                        <div id="navigation-containerHTML" class="navigation-container">
+                            <div class="navigation" onclick="showHTMLQuestion()">HTML</div>
+                        </div>
+                        <div id="navigation-containerCSS" class="navigation-container">
+                            <div class="navigation" onclick="showCSSQuestion()">CSS</div>
+                        </div>
+                        <div id="navigation-containerJS" class="navigation-container">
+                            <div class="navigation" onclick="showJSQuestion()">JS</div>
+                        </div>
+                        <div id="navigation-containerJAVA" class="navigation-container">
+                            <div class="navigation" onclick="showJAVAQuestion()">Java</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 header-bar">
+                    <img class="sid-bar-img" src="img/logo.png">
+                    <div class="sid-bar-categorie">
                         <div class="navigation-container">
-                            <div class="white-box-hover"></div>
+                            <div class="white-box-html"></div>
                             <div class="navigation" onclick="showHTMLQuestion()">HTML</div>
                         </div>
                         <div class="navigation-container">
@@ -56,7 +74,7 @@
 
                     <div class="card-body" id="answer-screen" style="display: none;">
                         <h2 class="card-title" id="questionText">Wer ist hier der Boss?</h2>
-                        <div class="reply" id="reply_1" onclick="answer('answer_1')">
+                        <div class="reply" disabeled id="reply_1" onclick="answer('answer_1')">
                             <div class="abcd">
                                 <h1>A</h1>
                             </div>
@@ -64,7 +82,7 @@
                                 Ich
                             </div>
                         </div>
-                        <div class="reply" id="reply_2" onclick="answer('answer_2')">
+                        <div class="reply" disabeled id="reply_2" onclick="answer('answer_2')">
                             <div class="abcd">
                                 <h1>B</h1>
                             </div>
@@ -72,7 +90,7 @@
                                 Du
                             </div>
                         </div>
-                        <div class="reply" id="reply_3" onclick="answer('answer_3')">
+                        <div class="reply" disabeled id="reply_3" onclick="answer('answer_3')">
                             <div class="abcd">
                                 <h1>C</h1>
                             </div>
@@ -80,7 +98,7 @@
                                 Er
                             </div>
                         </div>
-                        <div class="reply" id="reply_4" onclick="answer('answer_4')">
+                        <div class="reply" disabeled id="reply_4" onclick="answer('answer_4')">
                             <div class="abcd">
                                 <h1>D</h1>
                             </div>
